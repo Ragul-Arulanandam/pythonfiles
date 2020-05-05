@@ -14,7 +14,7 @@ def badversion(start ,end=n):
 
     while start<=end:
         if get<=0:
-            return "no good version"
+            return "No good version is available"
         else:
             if isbadversion(mid)== True:
                 if isbadversion(mid-1) == False:
@@ -24,4 +24,4 @@ def badversion(start ,end=n):
             else:
                 return badversion(mid,n)
 
-print(badversion(0,n))
+print("The badversion is ",badversion(0,n))
