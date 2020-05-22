@@ -1,11 +1,6 @@
 import random
 
-'''n=int(input())
-def isbadversion(n):
-    Number = random.randint(0,n)   
-    return Number     
-
-print(isbadversion(n))'''
+n= int(input())
 
 def badversion(n):
     start=0
@@ -14,13 +9,16 @@ def badversion(n):
     print("the fail",get)
     while start<=end:
         mid = (start+end)//2
-        if get == mid:
-            return mid #"good versions"
-        elif get>mid:
-            start=mid+1
+        if get <=0:
+            return "no good version"
         else:
-            start=mid-1
+            if get == mid:
+                return mid #"good versions"
+            elif get>mid:
+                start=mid-1
+            else:
+                start=mid+1
 
     return mid
 
-print(badversion(20))
+print(badversion(n))
