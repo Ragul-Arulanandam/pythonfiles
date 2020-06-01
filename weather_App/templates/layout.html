@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% if title %}
+        <title>Weather Map -{{ title }}</title>
+        {% else %}
+        <title>Weather Map</title>
+        {% endif %}
+        
+        <link rel="shortcut icon" href="./static/assets/weather.png" type="image/x-icon" >
+    <style>
+    body{
+        background-image: url(static/assets/fullbg.jpeg);
+        background-size:100%;
+        background-repeat: no-repeat;
+    }
+    </style>
+    </head>
+    <body>
+    <style>
+    
+    h1 {
+     border: 1px skyblue;
+     padding: 30px;
+     text-align: center;
+     font-family: "Times New Roman";
+     background-color: skyblue;
+     background-image: url(static/assets/weather1.jpeg);
+     background-size: 200px ;
+     background-repeat: no-repeat;
+     background-position: right;
+     animation-name: example;
+     animation-duration: 4s;
+     animation-iteration-count: infinite;
+}
+@keyframes example {
+  from {background-color: skyblue;}
+  to {background-color: green;}
+}
+    </style>
+        <h1>
+            WEATHER MAP SEARCH ENGINE 
+        </h1>
+        <br/>
+        <div id= "main">
+            {% block content %} {% endblock %}
+        </div>
+    </body>
+</html>
